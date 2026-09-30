@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Política de privacidad · Finanzas Hogar</title>
+  <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+  <main>
+    <p><a href="index.html">← Finanzas Hogar</a></p>
+    <h1>Política de privacidad</h1>
+    <p class="fecha">Última actualización: 29 de septiembre de 2026</p>
+
+    <p>Finanzas Hogar es una aplicación de uso personal y familiar. Esta política explica qué datos usa, para qué y cómo se protegen.</p>
+
+    <h2>Datos de la cuenta de la aplicación</h2>
+    <p>Para iniciar sesión se guarda el correo electrónico del usuario y la información financiera que él mismo registra (cuentas, movimientos, presupuestos y facturas). Estos datos se almacenan en Supabase y solo los ven los miembros del mismo hogar.</p>
+
+    <h2>Datos de Gmail</h2>
+    <p>La conexión con Gmail es opcional y la activa cada persona desde la aplicación. Se solicita únicamente el permiso de solo lectura <code>https://www.googleapis.com/auth/gmail.readonly</code>.</p>
+    <ul>
+      <li><strong>Qué se lee:</strong> los mensajes nuevos que traen un archivo <code>.zip</code> adjunto. De ellos solo se conservan las facturas electrónicas de la DIAN (XML UBL y su PDF).</li>
+      <li><strong>Qué se guarda:</strong> de cada factura, el proveedor, su NIT, el CUFE, la fecha, los totales, los impuestos y los ítems, junto con el identificador del mensaje para no procesarlo dos veces. El XML y el PDF se guardan en un almacenamiento privado del hogar. También se guardan la dirección de Gmail conectada y un token de acceso, que solo usa el servidor y ningún usuario puede leer.</li>
+      <li><strong>Qué no se hace:</strong> no se guarda el cuerpo de los correos, no se leen otros adjuntos ni otros mensajes, no se envía ningún correo y no se modifica el buzón.</li>
+      <li><strong>Para qué se usa:</strong> solo para mostrar las facturas al usuario en la bandeja "Facturas por revisar" de la aplicación.</li>
+    </ul>
+
+    <h2>Uso limitado de los datos de Google</h2>
+    <p>El uso y la transferencia a cualquier otra aplicación de la información recibida de las API de Google cumplen la <a href="https://developers.google.com/terms/api-services-user-data-policy">Política de datos del usuario de los servicios de API de Google</a>, incluidos los requisitos de uso limitado. En concreto, los datos de Gmail:</p>
+    <ul>
+      <li>no se venden ni se comparten con terceros;</li>
+      <li>no se usan para publicidad;</li>
+      <li>no se usan para entrenar modelos de inteligencia artificial ni se envían a servicios de inteligencia artificial;</li>
+      <li>no los lee ninguna persona, salvo el propio usuario o con su consentimiento expreso para resolver un problema, o cuando la ley lo exija.</li>
+    </ul>
+
+    <h2>Proveedores</h2>
+    <p>Los datos se almacenan y procesan en Supabase (base de datos, almacenamiento y funciones del servidor) y las notificaciones de correo nuevo llegan a través de Google Cloud Pub/Sub. No hay otros destinatarios.</p>
+
+    <h2>Cómo desconectar Gmail y borrar los datos</h2>
+    <p>En la aplicación, la opción de desconectar Gmail detiene la lectura, revoca el permiso y borra el token guardado. El permiso también se puede retirar en cualquier momento desde <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>. Para borrar las facturas ya importadas o la cuenta completa, basta con escribir al correo de contacto.</p>
+
+    <h2>Contacto</h2>
+    <p><a href="mailto:erneyvargasdev@gmail.com">erneyvargasdev@gmail.com</a></p>
+  </main>
+</body>
+</html>
