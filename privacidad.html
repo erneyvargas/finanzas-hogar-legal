@@ -20,7 +20,7 @@
     <h2>Datos de Gmail</h2>
     <p>La conexión con Gmail es opcional y la activa cada persona desde la aplicación. Se solicita únicamente el permiso de solo lectura <code>https://www.googleapis.com/auth/gmail.readonly</code>.</p>
     <ul>
-      <li><strong>Qué se lee:</strong> los mensajes nuevos que traen un archivo <code>.zip</code> adjunto. De ellos solo se conservan las facturas electrónicas de la DIAN (XML UBL y su PDF).</li>
+      <li><strong>Qué se lee:</strong> solo los mensajes que el propio usuario tiene en la etiqueta <strong>Facturas</strong> de su Gmail. Esa etiqueta la crea y la administra el usuario, normalmente con un filtro que la aplica a los correos con un archivo <code>.zip</code> adjunto. De esos mensajes solo se conservan las facturas electrónicas de la DIAN (XML UBL y su PDF). Los mensajes fuera de esa etiqueta no se leen.</li>
       <li><strong>Qué se guarda:</strong> de cada factura, el proveedor, su NIT, el CUFE, la fecha, los totales, los impuestos y los ítems, junto con el identificador del mensaje para no procesarlo dos veces. El XML y el PDF se guardan en un almacenamiento privado del hogar. También se guardan la dirección de Gmail conectada y un token de acceso, que solo usa el servidor y ningún usuario puede leer.</li>
       <li><strong>Qué no se hace:</strong> no se guarda el cuerpo de los correos, no se leen otros adjuntos ni otros mensajes, no se envía ningún correo y no se modifica el buzón.</li>
       <li><strong>Para qué se usa:</strong> solo para mostrar las facturas al usuario en la bandeja "Facturas por revisar" de la aplicación.</li>
